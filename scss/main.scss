@@ -1,0 +1,214 @@
+@import "_reset";
+body {
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.tabs {
+  margin: 150px auto;
+  width: 600px;
+
+  &__caption {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2b3040;
+    box-sizing: border-box;
+    padding: 0 50px;
+
+    &-li {
+      width: 150px;
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      border-bottom: 2px solid transparent;
+      cursor: pointer;
+
+      &-icon {
+        background-image: url(../img/icons.png);
+        width: 22px;
+        height: 22px;
+        display: block;
+
+        &--info {
+          background-position: -44px 0;
+        }
+        &--rate {
+          background-position: 0 0;
+        }
+        &--buy {
+          background-position: -22px 0;
+        }
+      }
+
+      &-title {
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #8d91a3;
+        margin-top: 13px;
+      }
+    }
+    .tabs__caption-li:hover,
+    .active {
+      border-bottom: 2px solid #fff;
+
+      .tabs__caption-li-icon--info {
+        background-position: -110px 0;
+      }
+      .tabs__caption-li-icon--rate {
+        background-position: -66px 0;
+      }
+      .tabs__caption-li-icon--buy {
+        background-position: -88px 0;
+      }
+
+      .tabs__caption-li-title {
+        color: #fff;
+      }
+    }
+  }
+  &__content {
+    padding: 60px 45px;
+    background-color: #212534;
+    display: none;
+
+    &-preview {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 160px;
+      &-img {
+        width: 100%;
+        display: block;
+      }
+
+      &-rating {
+        display: flex;
+        flex-direction: row-reverse;
+
+        &-input {
+          display: none;
+        }
+        &-input + .tabs__content-preview-rating-label:before {
+          content: "";
+          width: 22px;
+          height: 22px;
+          display: block;
+          cursor: pointer;
+          background-image: url(../img/icons.png);
+          background-position: -132px 0;
+          margin: 26px 3px;
+        }
+
+        &-input:hover ~ .tabs__content-preview-rating-label:before,
+        &-input:checked ~ .tabs__content-preview-rating-label:before {
+          background-position: -154px 0;
+        }
+      }
+    }
+    &-info {
+      padding-left: 40px;
+      position: relative;
+
+      &-name {
+        font-size: 32px;
+        margin: 5px 0 5px 3px;
+      }
+      &-released {
+        font-size: 14px;
+        margin: 0 0 37px 0;
+      }
+      &-about {
+        line-height: 22px;
+        color: #b7bacd;
+        font-size: 14px;
+        margin: 0 0 54px 0;
+      }
+      &-sale {
+        color: #fedc3f;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 12px;
+      }
+      &-price {
+        font-size: 32px;
+      }
+      &-buy {
+        padding: 20px 35px;
+        background-color: #13e28d;
+        border-radius: 2px;
+        border: none;
+        font-family: "Lato", sans-serif;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #fff;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        cursor: pointer;
+        outline: none;
+
+        &:hover {
+          background: darken(#13e28d, 20%);
+        }
+      }
+      &-rating {
+        width: 69px;
+        height: 69px;
+        border: 2px solid #787c9b;
+        color: #787c9b;
+        font-size: 20px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 69px;
+
+        &:before {
+          content: "";
+          width: 69px;
+          height: 69px;
+          position: absolute;
+          border-radius: 50%;
+          border-top: 4px solid #1ae681;
+          border-right: 4px solid #1ae681;
+          border-left: 4px solid transparent;
+          border-bottom: 4px solid transparent;
+          display: block;
+          top: -4px;
+          right: -4px;
+          transform: rotate(45deg);
+        }
+        &:after {
+          content: "";
+          width: 69px;
+          height: 69px;
+          position: absolute;
+          border-radius: 50%;
+          border-top: 4px solid #1ae681;
+          border-right: 4px solid #1ae681;
+          border-left: 4px solid transparent;
+          border-bottom: 4px solid transparent;
+          display: block;
+          top: -4px;
+          right: -4px;
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+  &__content.active {
+    display: flex;
+  }
+  &__content.red {
+    background-color: rgb(252, 76, 76);
+  }
+  &__content.green {
+    background-color: rgb(36, 172, 18);
+  }
+}

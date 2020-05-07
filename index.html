@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Tabs</title>
+  </head>
+  <body>
+    <div class="tabs">
+      <ul class="tabs__caption">
+        <li class="tabs__caption-li active">
+          <span
+            class="tabs__caption-li-icon tabs__caption-li-icon--info"
+          ></span>
+          <span class="tabs__caption-li-title">Information</span>
+        </li>
+        <li class="tabs__caption-li">
+          <span
+            class="tabs__caption-li-icon tabs__caption-li-icon--rate"
+          ></span>
+          <span class="tabs__caption-li-title">Ratings info</span>
+        </li>
+        <li class="tabs__caption-li">
+          <span class="tabs__caption-li-icon tabs__caption-li-icon--buy"></span>
+          <span class="tabs__caption-li-title">where to buy</span>
+        </li>
+      </ul>
+      <div class="tabs__content active">
+        <div class="tabs__content-preview">
+          <img
+            class="tabs__content-preview-img"
+            src="img/farcry.jpg"
+            alt="FARCRY"
+          />
+          <div class="tabs__content-preview-rating">
+            <input
+              type="radio"
+              id="1"
+              class="tabs__content-preview-rating-input"
+            />
+            <label for="1" class="tabs__content-preview-rating-label"></label>
+            <input
+              type="radio"
+              id="2"
+              class="tabs__content-preview-rating-input"
+            />
+            <label for="2" class="tabs__content-preview-rating-label"></label>
+            <input
+              type="radio"
+              id="3"
+              class="tabs__content-preview-rating-input"
+            />
+            <label for="3" class="tabs__content-preview-rating-label"></label>
+            <input
+              type="radio"
+              id="4"
+              class="tabs__content-preview-rating-input"
+            />
+            <label for="4" class="tabs__content-preview-rating-label"></label>
+            <input
+              type="radio"
+              id="5"
+              class="tabs__content-preview-rating-input"
+            />
+            <label for="5" class="tabs__content-preview-rating-label"></label>
+          </div>
+        </div>
+        <div class="tabs__content-info">
+          <div class="tabs__content-info-name">FarCry 4</div>
+          <div class="tabs__content-info-released">
+            First Released Nov 17, 2014
+          </div>
+          <div class="tabs__content-info-about">
+            In Far Cry 4, players find themselves in Kyrat, a breathtaking,
+            perilous and wild region of the Hima layas struggling under the
+            regime of a despotic self-appointed king.
+          </div>
+          <div class="tabs__content-info-sale">20% OFF!</div>
+          <div class="tabs__content-info-price">$59.96</div>
+          <button class="tabs__content-info-buy">BUY IT NOW</button>
+          <div class="tabs__content-info-rating">7.8</div>
+        </div>
+      </div>
+      <div class="tabs__content red"></div>
+      <div class="tabs__content green"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
